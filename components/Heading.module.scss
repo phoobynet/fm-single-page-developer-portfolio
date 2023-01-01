@@ -1,0 +1,39 @@
+.heading {
+  font-weight: 700;
+
+  &-xl {
+    font-size: 40px;
+    letter-spacing: -1.14px;
+    line-height: 40px;
+  }
+
+  &-l {
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: -1px;
+  }
+
+  // tablet
+  @media screen and (min-width: 728px) {
+    &-xl {
+      font-size: 72px;
+      letter-spacing: -2.05px;
+      line-height: 72px;
+    }
+
+    &-l {
+      font-size: 48px;
+      line-height: 56px;
+      letter-spacing: -1.5px;
+    }
+  }
+
+  // desktop
+  @media screen and (min-width: 1440px) {
+    &-xl {
+      font-size: 88px;
+      letter-spacing: -2.5px;
+      line-height: 88px;
+    }
+  }
+}
