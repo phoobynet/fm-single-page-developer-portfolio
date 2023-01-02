@@ -1,0 +1,49 @@
+.home {
+  display: grid;
+  justify-items: center;
+  margin-top: 1rem;
+  height: 100vh;
+  background-image: url('../assets/images/pattern-rings.svg'),
+    url('../assets/images/pattern-circle.svg');
+  background-position: left -22rem top 7rem, right -4.2rem top 14.5rem;
+  background-repeat: no-repeat, no-repeat;
+}
+
+.header {
+  position: relative;
+  display: grid;
+  justify-content: center;
+  grid-template-rows: 3.5rem 20px auto;
+  width: 174px;
+  height: 383px;
+}
+
+.myName {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.33px;
+  line-height: 2rem;
+  text-align: center;
+}
+
+.mySocialMedia {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  grid-column-gap: 1.5rem;
+
+  img {
+    width: 20px;
+    height: 20px;
+    z-index: 2;
+  }
+}
+
+.myProfileImage {
+  position: absolute;
+  object-position: center top;
+  top: -1rem;
+  width: 174px;
+  object-fit: contain;
+  filter: contrast(0.9);
+}
