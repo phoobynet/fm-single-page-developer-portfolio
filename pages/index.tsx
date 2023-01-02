@@ -3,6 +3,8 @@ import iconGithub from '@/assets/images/icon-github.svg'
 import iconLinkedin from '@/assets/images/icon-linkedin.svg'
 import iconTwitter from '@/assets/images/icon-twitter.svg'
 import profileMobile from '@/assets/images/image-profile-mobile.webp'
+import Button from '@/components/Button'
+import Heading, { HeadingSize } from '@/components/Heading'
 import styles from '@/styles/Home.module.scss'
 import Head from 'next/head'
 import Image from 'next/image'
@@ -54,7 +56,27 @@ export default function Home() {
             className={styles.myProfileImage}
           />
         </header>
-        <main></main>
+        <main className={styles.main}>
+          <Heading
+            size={HeadingSize.xl}
+            className={styles.greeting}
+          >
+            Nice to meet you!
+            <br />
+            I&apos;m <u>Adam Keyes</u>.
+          </Heading>
+
+          <p className={styles.aboutMe}>
+            Based in the UK, I’m a front-end developer passionate about building
+            accessible web apps that users love.
+          </p>
+
+          <div className={styles.contactMeButtonContainer}>
+            <Button>contact me</Button>
+          </div>
+
+          <hr className={styles.divider} />
+        </main>
       </div>
     </>
   )

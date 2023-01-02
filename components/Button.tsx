@@ -4,13 +4,12 @@ import { ButtonHTMLAttributes, PropsWithChildren } from 'react'
 export default function Button({
   children,
   ...buttonAttrs
-}: PropsWithChildren<
-  Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'className'>
->) {
+}: PropsWithChildren<ButtonHTMLAttributes<HTMLButtonElement>>) {
+  const { className, ...theRest } = buttonAttrs
   return (
     <button
-      {...buttonAttrs}
-      className={styles.button}
+      {...theRest}
+      className={`${styles.button} ${className}`}
     >
       {children}
     </button>

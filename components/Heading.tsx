@@ -9,12 +9,19 @@ export enum HeadingSize {
 
 interface Props {
   size: HeadingSize
+  className?: string
 }
 
-export default function Heading({ children, size }: PropsWithChildren<Props>) {
+export default function Heading({
+  children,
+  size,
+  className,
+}: PropsWithChildren<Props>) {
+  const headSizeClasses = styles[`heading-${HeadingSize[size]}`]
+
   return (
     <div
-      className={styles[`heading-${HeadingSize[size]}`]}
+      className={`${headSizeClasses} ${className}`}
       role="heading"
       aria-level={size}
     >

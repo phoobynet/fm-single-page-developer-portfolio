@@ -12,6 +12,7 @@
   text-transform: uppercase;
   cursor: pointer;
   transition: all 0.5s ease;
+  font-size: inherit;
 
   &:hover {
     color: var(--color-green);
